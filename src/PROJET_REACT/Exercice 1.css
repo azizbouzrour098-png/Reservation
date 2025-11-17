@@ -1,0 +1,406 @@
+.squire {
+    font-weight: bold;
+}
+.Parent {
+    margin: 20px;
+}
+button {
+    padding: 10px;
+}
+
+
+Différence entre state et props:
+
+State: Données internes li yekdew yetbaddlou mel composant nafsu (mutable).
+
+Props: Données li yjewhom composant mel parent (immutable).
+
+Si te7eb testi ro7ek, e5dem projet s8ir bech t7awel te3mel composant Calculator s8ir:
+
+State: result
+
+Boutons: +1, -1, Reset
+
+Yaffichi résultat fil interface.
+
+
+
+
+
+الفرق بين state و props بالعربي:
+state (الحالة): بيانات داخلية للمكون، يقدر يغيرها بنفسه (مثل حالة المصباح مضاء/مطفأ)
+
+props (الخصائص): بيانات ب يجيها المكون من الأب، ما يقدرش يغيرها (مثل مصفوفة الاقتباسات)
+
+نصيحة: جرب تكتب هذا الكود في مشروع React جديد و شوف كيفاش يشتري. إذا عندك أي سؤال، أنا هنا.
+
+
+أ) <Article = title."News" />
+
+ب) <Article title="News" />
+
+ج) <Article.title("News") />
+
+د) <Article(title."News") />
+
+4) ماذا يعني JSX؟
+
+أ) Java Syntax Extension
+
+ب) JavaScript XML
+
+ج) JSON Syntax Extension
+
+د) Java Standard X
+
+5) أي مكتبة تستخدم مع React لعرض المكونات في المتصفح؟
+
+أ) ReactDOM
+
+ب) Node.js
+
+ج) React Native
+
+د) Next.js
+
+6) كيف نعرض قائمة ديناميكية من المكونات بناءً على قيم مصفوفة؟
+
+أ) استخدام حلقة for أو while
+
+ب) استخدام دالة reduce()
+
+ج) استخدام المكون <List />
+
+د) استخدام دالة Array.map()
+
+الجزء الثاني: أسئلة نظرية (4 نقاط)
+1) ما هي props في React؟
+
+2) لماذا نستخدم return في المكونات الوظيفية؟
+
+3) اشرح الفرق بين المكونات الوظيفية والمكونات الصفية
+
+4) ما هو دور keys في القوائم؟
+
+الجزء الثالث: تمارين عملية (10 نقاط)
+التمرين 1: مكون وظيفي - قائمة المهام (5 نقاط)
+المطلوب:
+أنشئ مكون وظيفي TaskList يعرض قائمة مهام. كل مهمة تحتوي على:
+
+نص المهمة
+
+حالة الإنجاز (مكتملة/غير مكتملة)
+
+jsx
+// المطلوب: أكمل هذا الكود
+function TaskList({ tasks }) {
+  return (
+    <div> */
+      {/* استخدم دالة map لعرض المهام */}
+      /* {tasks.map((task, index) => (
+        <div key={index} style={{
+          border: '1px solid #ddd',
+          padding: '10px',
+          margin: '5px',
+          backgroundColor: task.completed ? '#d4edda' : '#f8d7da'
+        }}>
+          <span style={{ 
+            textDecoration: task.completed ? 'line-through' : 'none' 
+          }}>
+            {task.text}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// في App.js
+const tasks = [
+  { text: "تعلم React", completed: true },
+  { text: "بناء مشروع", completed: false },
+  { text: "مراجعة الدروس", completed: false }
+];
+التمرين 2: مكون صنفي - عداد (5 نقاط)
+المطلوب:
+أنشئ مكون عداد يسمح بزيادة وتنقيص القيمة.
+
+jsx
+class Compteur extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
+  incrementer = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  decrementer = () => {
+    this.setState({ count: this.state.count - 1 });
+  };
+
+  render() {
+    return (
+      <div style={{ textAlign: 'center', padding: '20px' }}>
+        <h2>العداد: {this.state.count}</h2>
+        <button onClick={this.incrementer} style={{ margin: '5px' }}>
+          +
+        </button>
+        <button onClick={this.decrementer} style={{ margin: '5px' }}>
+          -
+        </button>
+      </div>
+    );
+  }
+}
+السؤال الإضافي: اشرح متى نستخدم state ومتى نستخدم props
+
+✅ الأجوبة النموذجية:
+الجزء الأول:
+ب
+
+أ
+
+ب
+
+ب
+
+أ
+
+د
+
+الجزء الثاني:
+props: بيانات يرسلها المكون الأب إلى المكون الابن، تكون للقراءة فقط
+
+return: لإرجاع JSX الذي سيتم عرضه في الواجهة
+
+الفرق: المكونات الوظيفية تستخدم دوال، والمكونات الصفية تستخدم classes مع state و lifecycle
+
+keys: لتحديد كل عنصر بشكل فريد في القوائم وتحسين الأداء
+
+الجزء الثالث:
+الأكواد مكتوبة في التمرين
+
+الفرق بين state و props:
+
+state: بيانات داخلية يمكن للمكون تعديلها
+
+props: بيانات خارجية يرسلها الأب، للقراءة فقط */
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+### 🧪 Contrôle Expérimental React
+
+#### **Partie 1 : Les bases du cours (QCM + Questions de cours)**
+
+**QCM :**
+
+1. Quel est le rôle du `state` dans un composant React ?
+   A. Gérer le layout de l’application
+   B. Réagir aux événements
+   C. **Conserver des données entre les rendus** ✅
+   D. Gérer les propriétés des composants
+
+2. Quelle différence principale entre `props` et `state` ?
+   ➤ `props` : données **envoyées par le parent** et **non modifiables** dans le composant.
+   ➤ `state` : données **internes** au composant et **modifiables** avec `setState()` ou `useState()`.
+
+3. Qu'est-ce que JSX ?
+   ➤ C'est une syntaxe qui permet d'écrire du **HTML dans le JavaScript**.
+
+---
+
+#### **Partie 2 : Exercices pratiques**
+
+##### 🧩 Exercice 1 : Composant fonctionnel
+
+**Objectif :** Créer un composant fonctionnel appelé `Bonjour` qui accepte un prop `nom` et affiche :
+
+> Salut [nom] !
+
+**Code :**
+
+```jsx
+function Bonjour(props) {
+  return <h1>Salut {props.nom} !</h1>;
+}
+
+// Utilisation
+<Bonjour nom="Abdo" />
+```
+
+**Explication :**
+
+* `props` contient les données envoyées au composant.
+* `{props.nom}` permet d'afficher la valeur du prop.
+
+---
+
+##### 🧩 Exercice 2 : Composant de classe avec `props` et `state`
+
+**Objectif :** Créer un composant de classe `Compteur` qui :
+
+* affiche un titre reçu via `props`,
+* utilise un `state` pour afficher un nombre,
+* augmente le compteur en cliquant sur un bouton.
+
+**Code :**
+
+```jsx
+import React, { Component } from "react";
+
+class Compteur extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  incrementer = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    return (
+      <>
+        <h2>{this.props.titre}</h2>
+        <p>Compteur : {this.state.count}</p>
+        <button onClick={this.incrementer}>+1</button>
+      </>
+    );
+  }
+}
+
+// Utilisation
+<Compteur titre="Mon Compteur" />
+```
+
+**Explication :**
+
+* `this.state` garde la valeur du compteur.
+* `this.props.titre` vient du parent.
+* `this.setState()` met à jour le `state`, ce qui réactualise le composant automatiquement.
+
+---
+
+#### ✅ **Conclusion :**
+
+Dans ce contrôle, tu dois :
+
+1. Montrer que tu comprends les notions de base (state, props, JSX).
+2. Savoir coder deux composants simples : un fonctionnel et un en classe.
+3. Gérer l’affichage dynamique avec `state` et `props`.
+
+
+
+
+📘 "Le contrôle portera sur :"
+يعني: الاختبار غادي يكون فيه هاد الحوايج 👇
+
+🔹 1. Les bases du cours (QCM + Questions de cours)
+
+هاد الجزء فيه أسئلة نظرية على الدروس ديال React اللي قريتوهم، بحال:
+
+شنو هو React؟
+
+شنو الفرق بين composant fonctionnel و composant de classe؟
+
+شنو هو state و props؟
+
+شنو الدور ديال useState؟
+
+شنو كيدير render() فالكلاس؟
+
+شنو المعنى ديال JSX؟
+
+📍 QCM = Questions à Choix Multiples (أسئلة اختيار من متعدد)
+📍 Questions de cours = أسئلة مفتوحة (تجاوب بجملة أو شرح صغير)
+
+🔹 2. Deux exercices pratiques
+
+هاد الجزء فيه تمارين باش تطبّق بالكود واش فاهم ولا لا.
+
+🧩 التمرين الأول:
+
+Création d’un composant fonctionnel
+يعني خصك تصاوب Composant Functional باستعمال function أو arrow function.
+
+🔸 مثال:
+
+function Bonjour(props) {
+  return <h1>Salut {props.nom} !</h1>;
+}
+
+// استعمالو
+<Bonjour nom="Abdo" />
+
+
+➡️ هنا كتستعمل props باش تعرض المعطيات.
+
+🧩 التمرين الثاني:
+
+Création d’un composant de classe avec props et state
+
+يعني خصك تدير class component فيه props و state و تغيّر القيم ديال state مثلاً.
+
+🔸 مثال:
+
+import React, { Component } from "react";
+
+class Compteur extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  incrementer = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    return (
+      <>
+        <h2>{this.props.titre}</h2>
+        <p>Compteur : {this.state.count}</p>
+        <button onClick={this.incrementer}>+1</button>
+      </>
+    );
+  }
+}
+
+// استعمال
+<Compteur titre="Mon Compteur" />
+
+
+➡️ هنا كاين:
+
+props باش تمرّر titre.
+
+state باش تخزّن count.
+
+méthode باش تبدّل القيمة.
+
+🔎 الخلاصة:
+الاختبار فيه:
+
+أسئلة نظرية (QCM + cours)
+
+2 تمارين بالكود:
+
+واحد بـ function component
+
+واحد بـ class component مع props و state
+
+ */

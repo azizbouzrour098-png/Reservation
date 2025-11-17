@@ -1,0 +1,208 @@
+<!-- <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>ProductCard React</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    const produit = {id : 1 , titre: "Hp",prix: 3500,inStock: true},
+    
+    function ProductCard(produit) {
+      const prixStyle = { color: produit.prix < 2000 ? "rouge" : "red" };
+
+      return (
+
+        <div style={{border: "1px solid black", padding: "10px", marginBottom: "10px"}}>
+          <h1 style={{fontWeight: "bold"}}> id : {produit.id}</h1>
+          <h2 style={{fontWeight: "bold"}}>Le Titre : {produit.titre}</h2>
+          <p style={{}}> Le Prix: {produit.prix} DH</p>
+          <p> instock : {produit.inStock ? "Disponible" : "No Disponible"}</p>
+        </div>
+
+      );
+    }
+
+  const root = ReactDOM.createRoot(document.getElementById("root")) ; 
+  root.render(<ProductCard id={1} titre="PC" prix={3500} inStock={true} />)
+  export default ProductCard;
+
+  </script>
+</body>
+</html>
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mon premier React</title>
+  React 
+     const root = ReactDOM.createRoot(document.getElementById("root"));
+     root.render(<ProductCard produit={produit} />);
+  export default ProductCard;-->
+  <!-- <script src="https://unpkg.com/react@18/umd/react.development.js"></script> -->
+  <!-- ReactDOM -->
+  <!-- <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+  <!-- Babel
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    #myList{
+      color:brown
+    }
+
+
+    .myClass{
+      border:1px solid black;
+      border-radius:10px;
+    }
+  </style>
+</head>
+<body> -->
+
+
+   <!-- <div id="container"></div> 
+    
+   <script type="text/babel">
+//     const myStyle = {color:"red" , border:"1px solid black" , borderRadius:"10px"};
+//     const liste = ["Element1" , "Element2" , "Element3", "Element4"];
+
+//   function DireBonjour(props){
+//     return(
+//               <p>Bonjour {props.nom} , tu as {props.age} ans</p>
+//     )}
+
+//     const articles = [
+//     {id:1 , nom:"PC" , prix:3400},
+//     {id:2 , nom:"Tablette" , prix:2000},
+//     {id:3 , nom:"Clavier" , prix:500},
+//   ] 
+// function MyArticle({id,nom,prix}){
+//       return (
+//         <li key={id}>{id} - {nom} - {prix}</li>
+//       )
+// }
+
+// function ListeArticles(props){
+//   return (
+//     <ul>
+//       {props.items.map(e => (
+//         <MyArticle  id={e.id} nom={e.nom} prix={e.prix} />
+//       ))}
+//       </ul>
+           
+//       )
+// }
+
+
+
+// //   function Liste1(){
+// //       return (
+// //         liste.map((e,index)=><li key={index}>{e}</li>)
+// //       );
+// //     }
+
+    
+
+//     const root = ReactDOM.createRoot(document.getElementById("container"));
+//     root.render(<ListeArticles items={articles}/>);
+
+// import React from 'react';
+
+// const products = [
+//   { id: 1, title: 'Hp i5 11éme ', price: 4599, inStock: true },
+//   { id: 2, title: 'Lenovo', price: 50, inStock: false },
+//   { id: 3, title: 'Redmi', price: 99 , inStock: true }
+// ];
+// const ProductList = () => {
+//   return (
+//     <div>
+//       <h2>Liste de produits</h2>
+//       <ul style={{ listStyle: 'none', padding: 0 }}>
+//         {products.map(product => (
+//           <li 
+//             key={product.id}
+//             style={{
+//               padding: '10px',
+//               margin: '5px 0',
+//               backgroundColor: product.inStock ? '#f8f9fa' : '#e9ecef',
+//               color: product.inStock ? 'black' : 'gray',
+//               border: '1px solid #dee2e6',
+//               borderRadius: '4px',
+//               opacity: product.inStock ? 1 : 0.7
+//             }}
+//           >
+//             <strong>{product.title}</strong> - {product.price.toFixed(2)}€
+//             {!product.inStock && (
+//               <span style={{ 
+//                 marginLeft: '10px', 
+//                 backgroundColor: '#dc3545', 
+//                 color: 'white', 
+//                 padding: '2px 6px', 
+//                 borderRadius: '3px',
+//                 fontSize: '0.8em'
+//               }}>
+//                 Rupture
+//               </span>
+//             )}
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default ProductList;
+
+import React from 'react';
+
+const ProductCard = ({ product }) => {
+  const { title, price, inStock } = product;
+
+  // Déterminer la couleur du prix
+  const priceColor = price < 2000 ? 'green' : 'red';
+
+  // Déterminer le message de disponibilité
+  const stockMessage = inStock ? 'Disponible' : 'Rupture de stock';
+
+  return (
+    <div style={{
+      border: '1px solid #ddd',
+      borderRadius: '8px',
+      padding: '16px',
+      margin: '10px',
+      maxWidth: '300px',
+      boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+    }}>
+      <h3 style={{ fontWeight: 'bold', margin: '0 0 10px 0' }}>
+        {title}
+      </h3>
+      
+      <p style={{ 
+        color: priceColor, 
+        fontSize: '1.2em', 
+        margin: '5px 0' 
+      }}>
+        {price.toLocaleString()} DH
+      </p>
+      
+      <p style={{ 
+        color: inStock ? 'green' : 'red', 
+        fontWeight: 'bold',
+        margin: '5px 0'
+      }}>
+        {stockMessage}
+      </p>
+    </div>
+  );
+};
+
+   </script>
+
+
+</body>
+</html> -->
