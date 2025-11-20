@@ -78,62 +78,127 @@
 //   );
 // }
 
+//############################################################################################
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import React, { useState, useEffect } from "react";
 import './Projet.css';
 import { Link } from "react-router-dom";
+
 export default function ProfilCard() {
 
-  return <>
-    <nav>
-        <div className='titre'>
-          <h1 className='titre1'>aziZ</h1>
-          <h1> <span>caRs </span> </h1>
-          <img className='img1' src="Cars.jpeg"/>
-        </div>
-        <div className='div1'>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/list">Cars/List</Link></li>
-            <li><Link to="/details">Cars/Details</Link></li>
-            <li><Link to="/reservation">Reservation</Link></li>
-          </ul>
-        </div>
-        <div className='div2'>
-          <Link to="/login"><button>Login</button></Link>
-          <Link to="/signup"><button>Sign App</button></Link>
-        </div>
-    </nav>
-      <div className='parent'>
+  const [showMore, setShowMore] = useState(false);
+  const [visits, setVisits] = useState(0);
+
+  useEffect(() => {
+    const count = JSON.parse(localStorage.getItem("visits")) || 0;
+    setVisits(count + 1);
+    localStorage.setItem("visits", JSON.stringify(count + 1));
+  }, []);
+
+  return (
+    <>
+      
+
+      <div className="parent fadeIn">
         <div className='parent2'>
           <img className='img2' src='/voiture.png' />
         </div>
+
         <div className='parent1'>
-          <h1 className='titre2'> Welcome to aziZ<span>caRs </span> my platform! </h1>
-          <p> We offer you a quick and easy experience to explore available cars, view their details,
-              and book them anytime, anywhere. </p>
-          <p> Our goal is to simplify the rental process and provide the best offers with minimal effort. </p>
-          <p> Our car rental service is available 24/24. </p>
+          <h1 className='titre2'>
+            Welcome to aziZ<span>caRs</span> M'y platform!
+          </h1>
+
+          <p>
+            We offer you a quick and easy experience to explore available cars, 
+            view details, and book them anytime, anywhere.
+          </p>
+
+          {showMore && (
+            <>
+              <p>Our goal is to simplify the rental process and provide the best offers.</p>
+              <p>Our car rental service is available 24/24.</p>
+            </>
+          )}
+
+          <button 
+            onClick={() => setShowMore(!showMore)}
+            style={{
+              padding: "10px 20px",
+              marginTop: "15px",
+              background: "rgb(205, 3, 121)",
+              color: "white",
+              borderRadius: "10px",
+              cursor: "pointer"
+            }}
+          >
+            {showMore ? "Show Less" : "Read More"}
+          </button>
+
+          <p style={{ marginTop: "20px", opacity: 0.7 }}>
+            👀 Visits: {visits}
+          </p>
         </div>
       </div>
-
-     </>
+    </>
+  );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//###################################################################################################
+
+
+// import './Projet.css';
+// import { Link } from "react-router-dom";
+// export default function ProfilCard() {
+
+//   return <>
+//     <nav>
+//         <div className='titre'>
+//           <h1 className='titre1'>aziZ</h1>
+//           <h1> <span>caRs </span> </h1>
+//           <img className='img1' src="Cars.jpeg"/>
+//         </div>
+//         <div className='div1'>
+//           <ul>
+//             <li><Link to="/">Home</Link></li>
+//             <li><Link to="/list">Cars/List</Link></li>
+//             <li><Link to="/details">Cars/Details</Link></li>
+//             <li><Link to="/reservation">Reservation</Link></li>
+//           </ul>
+//         </div>
+//         <div className='div2'>
+//           <Link to="/login"><button>Login</button></Link>
+//           <Link to="/signup"><button>Sign App</button></Link>
+//         </div>
+//     </nav>
+//       <div className='parent'>
+//         <div className='parent2'>
+//           <img className='img2' src='/voiture.png' />
+//         </div>
+//         <div className='parent1'>
+//           <h1 className='titre2'> Welcome to aziZ<span>caRs </span> my platform! </h1>
+//           <p> We offer you a quick and easy experience to explore available cars, view their details,
+//               and book them anytime, anywhere. </p>
+//           <p> Our goal is to simplify the rental process and provide the best offers with minimal effort. </p>
+//           <p> Our car rental service is available 24/24. </p>
+//         </div>
+//       </div>
+
+//      </>
+// }
 
 
 

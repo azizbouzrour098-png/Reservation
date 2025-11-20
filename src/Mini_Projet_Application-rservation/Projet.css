@@ -186,8 +186,6 @@ div p {
 
 
 
-
-/* Nav */
 nav {
   display: flex;
   justify-content: space-between;
@@ -270,4 +268,84 @@ nav {
 
 .reservation-form button:hover {
   background: #e33a9f;
+}
+
+.sign-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #1a1a1a; /* نفس لون form ديال Reservation */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(205, 3, 121, 0.5);
+  text-align: center;
+}
+
+.sign-container h1 {
+  color: white; /* نفس لون العناوين */
+  font-weight: bold;
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.sign-container h1 span {
+  color: rgb(205, 3, 121); /* نفس لون span في ProfilCard */
+}
+
+.sign-container p {
+  color: white;
+  font-family: cursive;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sign-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #111;
+  color: white;
+}
+
+.sign-form input::placeholder {
+  color: #ccc;
+}
+
+.btn-submit {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(205, 3, 121);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: white;
+  color: rgb(205, 3, 121);
+  transform: scale(1.05);
+}
+
+.login-link {
+  margin-top: 15px;
+  color: white;
+}
+
+.login-link a {
+  color: rgb(205, 3, 121);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
 }

@@ -4,7 +4,6 @@
  //                   //
 ///////////////////////
 
-import React, { useState } from "react";
 
 
 // import { useState } from "react"
@@ -15,9 +14,12 @@ import React, { useState } from "react";
 //  2:/ Updating : Mise à jour
 //  3:/ Unmouting
 
-  ////////////////////////////
- //  tari9a dial Class     //
 ////////////////////////////
+//  tari9a dial Class     //
+////////////////////////////
+
+import React, { useState } from "react";
+import MyHooks from './Cours5';
 
 export default class LifeCycle extends React.Component{
 
@@ -68,6 +70,7 @@ export default class LifeCycle extends React.Component{
             <button onClick={this.ClickReset}> =0 </button>
             <button onClick={this.ClickMoins}> -1 </button>
             <h1> {this.state.Number} Secondes </h1>
+            <MyHooks />
         </>
     }
 }

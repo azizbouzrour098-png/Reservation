@@ -1,20 +1,50 @@
-import React, { createElement } from 'react';
-import ReactDOM from 'react-dom/client';
+// import React, { createElement } from 'react';
+// import ReactDOM from 'react-dom/client';
+//## import App from './App';
+// import './index.css';
+//## import React from 'react';
+// import ReactDOM from 'react-dom/client';
+//## import { BrowserRouter } from 'react-router-dom';
+// import ProfilCard from './MiniProjet/Projet.js';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <ProfilCard />
+//     </BrowserRouter>
+//   </React.StrictMode>
+// );
+
+
+
+
 // import App from './App';
-import './index.css';
 // import React from 'react';
 // import ReactDOM from 'react-dom/client';
+
+
+// ################## (hado dial Mini Projet dialy  #############################
+import React, { createElement } from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 import { BrowserRouter } from 'react-router-dom';
-import ProfilCard from './MiniProjet/Projet.js';
+
+import Router from './MiniProjet/Router.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ProfilCard />
+      <Router />
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// #########################  (7eta l hena)  #####################################
+
+
+
 
 
 // import Squire from './PROJET_REACT/Exercice 1'
@@ -51,7 +81,7 @@ root.render(
 
 // import MyNumber from './PROJET_REACT/Cours6.js'
 
-// import LifeCycle from './PROJET_REACT/Cours7.js'
+// ### import LifeCycle from './PROJET_REACT/Cours7.js'
 
 // import ProfilCard from './MiniProjet/Projet';
 
@@ -70,7 +100,7 @@ root.render(
 //     'Orange' ,
 //     'Ananase' ,
 // ]
-// const root = ReactDOM.createRoot(document.getElementById('root'));
+// ### const root = ReactDOM.createRoot(document.getElementById('root'));
 // const h4 = <h2><b><i><pre> Wax a lfereda </pre></i></b></h2>    ila beghayt nesayb xi element fi page index.js o khaseni ne3ayet 3elih fi root.render(h2) fin index.js
 // const LesFruits = [
 //       'banane' , 
@@ -81,10 +111,10 @@ root.render(
 //       'tomato'
       
 // ]
-// const number = ['eins' , 'zwei' , 'Drei' , 'vier' , 'fünf' , 'seches' , 'Zeiben' ,  'acht' , 'neun' , 'zehn']
+//### const number = ['eins' , 'zwei' , 'Drei' , 'vier' , 'fünf' , 'seches' , 'Zeiben' ,  'acht' , 'neun' , 'zehn'] 
 
-// root.render(
-//   <React.StrictMode>
+//### root.render( 
+//###   <React.StrictMode>
     {/* <HelloWorld Name="Ich koma ause morroco" /> */}
     {/* <HelloWorld Name="Ich koma ause sapin" /> */}
     {/* <HelloWorld Name="Ich koma ause Dutsh" /> */}
@@ -104,7 +134,7 @@ root.render(
 
     {/* <ProfilForm /> */}
 
-      // <ProfilCard Numbres={number}/>
+     {/* <ProfilCard Numbres={number}/> */}
 
     {/* <App/> */}
 
@@ -120,7 +150,7 @@ root.render(
 
     {/* <MySetate /> */}
 
-    {/* <LifeCycle Numbres={number} /> */}
+    // ### <LifeCycle Numbres={number} />  
 
     {/* <Events/> */}
 
@@ -135,8 +165,8 @@ root.render(
     </Formulaire>
      */}
    {/* <DireBonjour /> */}
-//   </React.StrictMode>
-// );
+  //###  </React.StrictMode>  
+// ###); 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
