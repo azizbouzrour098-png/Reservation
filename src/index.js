@@ -1,10 +1,10 @@
 // import React, { createElement } from 'react';
 // import ReactDOM from 'react-dom/client';
-//## import App from './App';
-// import './index.css';
-//## import React from 'react';
+// import App from './App';
+// // import './index.css';
+// import React from 'react';
 // import ReactDOM from 'react-dom/client';
-//## import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 // import ProfilCard from './MiniProjet/Projet.js';
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -30,7 +30,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 
-import Router from './MiniProjet/Router.js';
+import Router from './Mini_Projet_Application-rservation/Router.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -47,51 +47,51 @@ root.render(
 
 
 
-// import Squire from './PROJET_REACT/Exercice 1'
+// import Squire from './Les Cours/Exercice 1'
 
-// import MyApp from './PROJET_REACT/Test2';
+// import MyApp from './Les Cours/Test2';
 
-// import MyCount from './PROJET_REACT/Test1'
+// import MyCount from './Les Cours/Test1'
 
-// import MyAge from './PROJET_REACT/Test1'
+// import MyAge from './Les Cours/Test1'
 
-// import Fruit from './PROJET_REACT/Test3(fruit)'
+// import Fruit from './Les Cours/Test3(fruit)'
 
-// import FeuTricolore from './PROJET_REACT/Test3(fruit)'
+// import FeuTricolore from './Les Cours/Test3(fruit)'
 
-// import UnJeux from './PROJET_REACT/TP2.js'
+// import UnJeux from './Les Cours/TP2.js'
 
-// import FormulaireInscription from './PROJET_REACT/TP3'
+// import FormulaireInscription from './Les Cours/TP3'
 
-// import HelloWorld from './PROJET_REACT/TP3'
+// import HelloWorld from './Les Cours/TP3'
 
-// import MySetate from './PROJET_REACT/Cours3.js'
+// import MySetate from './Les Cours/Cours3.js'
 
-// import Events from './PROJET_REACT/Cours4.js';
+// import Events from './Les Cours/Cours4.js';
 
-// import MyHooks from './PROJET_REACT/Cours5.js'
+// import MyHooks from './Les Cours/Cours5.js'
 
 // import reportWebVitals from './reportWebVitals';
 
-// import User from './PROJET_REACT/TP1.js';
+// import User from './Les Cours/TP1.js';
 
-// import Formulaire from './PROJET_REACT/TP1.js'
+// import Formulaire from './Les Cours/TP1.js'
 
-// import MyFunction from './PROJET_REACT/Cours1.js';
+// import MyFunction from './Les Cours/Cours1.js';
 
-// import MyNumber from './PROJET_REACT/Cours6.js'
+// import MyNumber from './Les Cours/Cours6.js'
 
-// ### import LifeCycle from './PROJET_REACT/Cours7.js'
+// import LifeCycle from './Les Cours/Cours7.js'
 
 // import ProfilCard from './MiniProjet/Projet';
 
-// import MyCours from './PROJET_REACT/Cours2.js';
+// import MyCours from './Les Cours/Cours2.js';
 
-// import MyAge from './PROJET_REACT/Test1.js';
+// import MyAge from './Les Cours/Test1.js';
 
-// import ProfilForm from './PROJET_REACT/ProfilForm.jsx'
-// import DisplayForm from './PROJET_REACT/DisplayForm.jsx'
-// import App from './PROJET_REACT/App.jsx'
+// import ProfilForm from './Les Cours/ProfilForm.jsx'
+// import DisplayForm from './Les Cours/DisplayForm.jsx'
+// import App from './Les Cours/App.jsx'
 
 
 // const FruitsArray = [
@@ -100,7 +100,7 @@ root.render(
 //     'Orange' ,
 //     'Ananase' ,
 // ]
-// ### const root = ReactDOM.createRoot(document.getElementById('root'));
+// const root = ReactDOM.createRoot(document.getElementById('root'));
 // const h4 = <h2><b><i><pre> Wax a lfereda </pre></i></b></h2>    ila beghayt nesayb xi element fi page index.js o khaseni ne3ayet 3elih fi root.render(h2) fin index.js
 // const LesFruits = [
 //       'banane' , 
@@ -111,10 +111,10 @@ root.render(
 //       'tomato'
       
 // ]
-//### const number = ['eins' , 'zwei' , 'Drei' , 'vier' , 'fünf' , 'seches' , 'Zeiben' ,  'acht' , 'neun' , 'zehn'] 
+// const number = ['eins' , 'zwei' , 'Drei' , 'vier' , 'fünf' , 'seches' , 'Zeiben' ,  'acht' , 'neun' , 'zehn'] 
 
-//### root.render( 
-//###   <React.StrictMode>
+// root.render( 
+// <React.StrictMode>
     {/* <HelloWorld Name="Ich koma ause morroco" /> */}
     {/* <HelloWorld Name="Ich koma ause sapin" /> */}
     {/* <HelloWorld Name="Ich koma ause Dutsh" /> */}
@@ -150,7 +150,7 @@ root.render(
 
     {/* <MySetate /> */}
 
-    // ### <LifeCycle Numbres={number} />  
+    // <LifeCycle Numbres={number} />  
 
     {/* <Events/> */}
 
@@ -165,8 +165,8 @@ root.render(
     </Formulaire>
      */}
    {/* <DireBonjour /> */}
-  //###  </React.StrictMode>  
-// ###); 
+// </React.StrictMode>  
+// ); 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

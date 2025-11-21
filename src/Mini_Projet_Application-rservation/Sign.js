@@ -17,7 +17,6 @@ export default function SignApp() {
     e.preventDefault();
     console.log("User Data:", formData);
     alert("Thank you your account is connected");
-    // هنا ممكن دير API call لو بغيت
   };
 
   return (
