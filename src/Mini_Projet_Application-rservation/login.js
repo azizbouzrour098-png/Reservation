@@ -24,7 +24,7 @@ export default function Signup() {
 
     // Validation
     if (!form.name || !form.email || !form.password || !form.confirm) {
-      setError("⚠️ Please fill all fields!");
+      setError("Please fill all fields!");
       setSuccess("");
       return;
     }

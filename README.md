@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+Mini Projet – Application de Réservation de Voitures
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce projet est une application web développée en React JS, permettant aux utilisateurs de parcourir des voitures, consulter leurs détails, créer un compte, se connecter et effectuer des réservations.
+L’objectif principal est de créer une interface simple, intuitive et 100% fonctionnelle, utilisant localStorage pour conserver les données.
 
-## Available Scripts
+1/. Présentation Générale
 
-In the project directory, you can run:
+L’utilisateur peut parcourir plusieurs pages grâce à React Router : une page d’accueil, une liste de voitures, une page de détails, un formulaire de réservation, et les pages Login/Signup. Chaque réservation contient un nom, un modèle de voiture et une date. Lorsqu’il valide, la réservation est stockée dans le localStorage et s’affiche dans une liste où l’utilisateur peut aussi supprimer une entrée.
 
-### `npm start`
+    1/.Réservation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+        La page de réservation contient un formulaire simple. Si l’utilisateur laisse les champs vides, un message d’erreur apparaît. Sinon, les informations sont ajoutées à une liste de réservations enregistrée dans le navigateur. La suppression d’une réservation met automatiquement la liste à jour.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    2/.Authentification
 
-### `npm test`
+        L’utilisateur peut créer un compte via la page Signup. Les informations sont enregistrées localement. Lors du Login, l’application vérifie si les données correspondent. Si c’est correct, l’utilisateur est connecté, sinon un message d’erreur est affiché. Le système reste simple et fonctionne uniquement avec localStorage, sans serveur.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    3/.Interface et Design
 
-### `npm run build`
+        Le style de l’application est géré dans un seul fichier CSS. On retrouve une barre de navigation avec plusieurs liens, des effets hover, des couleurs cohérentes sur toutes les pages, et un design responsive qui s’adapte aux écrans. Le formulaire de réservation et celui d’inscription possèdent un style moderne avec des ombres colorées.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+L’utilisateur peut :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+==> Accéder à une page d’accueil animée 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+==> Voir la liste des voitures disponibles
 
-### `npm run eject`
+==> Consulter la fiche détaillée de chaque voiture
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+==> S’inscrire / Se connecter
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+==> Faire une réservation avec nom + voiture + date
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+==> Gérer ses réservations (suppression disponible)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+==> Naviguer entre les pages grâce à React 
 
-## Learn More
+2/. Fonctionnalités en Détail
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+--> Page d’Accueil 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    #- Section d’introduction avec texte + image background
 
-### Code Splitting
+    #- Présentation du concept du site
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    #- Navigation rapide
 
-### Analyzing the Bundle Size
+--> CarList
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    #- Liste complète des voitures
 
-### Making a Progressive Web App
+    #- Chaque item contient une image + nom + bouton détails
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+--> DétailsCars
 
-### Advanced Configuration
+    #- Affichage détaillé de la voiture sélectionnée
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    #- Informations supplémentaires
 
-### Deployment
+    #- Bouton pour aller directement à la réservation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+--> Réservation (Reservation.js)
 
-### `npm run build` fails to minify
+    #- Formulaire composé de :
+        _ Nom complet
+        _ Modèle de voiture
+        _ Date de réservation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    #- Vérification des champs (validation simple)
+
+    #- Confirmation avec message animé
+
+    #- Stockage automatique dans localStorage
+
+    #- Liste des réservations enregistrées
+
+    #- Suppression possible
+
+--> Authentification : Login / Signup / SignApp
+
+    #- Création de compte
+
+    #- Stockage en local
+
+    #- Login avec vérification des informations
+
+    #- Style moderne adapté au thème global
+
+--> Layout / Navigation
+
+    #- Barre de navigation affichée sur toutes les pages
+
+    #- Liens dynamiques + animation hover
+
+    #- Design propre et responsive
+
+3/. Technologies Utilisées
+
+    --> React JS
+
+    --> React Router DOM
+
+    --> CSS3 (Projet.css)
+
+    --> JavaScript ES6
+
+    --> localStorage API
+
+
+#===>> Résumé : 
+
+Ce projet est une application web de réservation de voitures développée avec React JS et utilisant localStorage pour stocker les comptes utilisateurs et les réservations. L’utilisateur arrive sur la page d’accueil où il découvre la plateforme et peut consulter la liste des voitures disponibles avec leurs images, noms et prix. En cliquant sur une voiture, il peut accéder à ses détails. Ensuite, il peut créer un compte via la page d’inscription et se connecter pour remplir le formulaire de réservation en choisissant le modèle et la date. Chaque réservation est affichée dans une liste avec possibilité de suppression. La navigation est fluide grâce à React Router, le design est moderne, responsive et basé sur un thème sombre avec une couleur principale rose/violet pour les boutons et titres, et l’utilisateur peut même suivre le nombre de visites sur la page d’accueil.
